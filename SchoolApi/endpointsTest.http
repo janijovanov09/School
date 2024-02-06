@@ -1,0 +1,140 @@
+## Courses
+
+### Get all courses
+GET https://localhost:5001/course
+Accept: application/json
+
+### Get course by id
+GET https://localhost:5001/course/
+Accept: application/json
+
+### Create course
+POST https://localhost:5001/course
+Content-Type: application/json
+
+{
+  "name": "testCourse7",
+  "companyName": "testCompany",
+  "date": "2024-01-20",
+  "companyphonenumber": "111-222-333",
+  "companyEmail": "testCompany@test.com"
+}
+
+### Update course
+PUT https://localhost:5001/course/
+Content-Type: application/json
+
+{
+  "companyName": "testCompany",
+  "date": "2024-02-05",
+  "companyphonenumber": "111-222-333",
+  "companyEmail": "testCompany@test2.com"
+}
+
+### Delete course
+DELETE https://localhost:5001/course/7
+Accept: application/json
+
+
+## Participants
+
+### Get all participants
+GET https://localhost:5001/participant
+Accept: application/json
+
+### Get participant by id
+GET https://localhost:5001/participant/
+Accept: application/json
+
+### Create participant
+POST https://localhost:5001/participant
+Content-Type: application/json
+
+{
+  "name": "testParticipant",
+  "phoneNumber": "222-444-555",
+  "email": "testParticipant@test.com"
+}
+
+### Update participant
+PUT https://localhost:5001/participant/
+Content-Type: application/json
+
+{
+  "name": "testParticipant",
+  "phoneNumber": "222-444-555",
+  "email": "testParticipant@test2.com"
+}
+
+### Delete participant
+DELETE https://localhost:5001/participant/
+Accept: application/json
+
+
+## Course Participants
+
+### Get all course participants
+GET https://localhost:5001/courseparticipant
+Accept: application/json
+
+### Get course participant by course id
+GET https://localhost:5001/courseparticipant/
+Accept: application/json
+
+### Create course participant
+POST https://localhost:5001/courseparticipant
+Content-Type: application/json
+
+{
+  "courseid": "7",
+  "participantid": "25ab57ee-19df-47f7-b39f-dfceeceea9b"
+}
+
+### Update course participant
+PUT https://localhost:5001/courseparticipant/
+Content-Type: application/json
+
+{
+  "courseId": "testParticipant",
+  "participantId": "222-444-555"
+}
+
+### Delete course participant
+DELETE https://localhost:5001/courseparticipant/6
+Accept: application/json
+
+
+
+
+
+## Course Schedules
+
+### Get all course schedules
+GET https://localhost:5001/courseschedule
+Accept: application/json
+
+### Get course schedules by course id
+GET https://localhost:5001/courseschedule/
+Accept: application/json
+
+### Create course schedule
+POST https://localhost:5001/courseschedule
+Content-Type: application/json
+
+{
+  "courseid": "6",
+  "date": "2024-02-03"
+}
+
+### Update course schedule
+PUT https://localhost:5001/courseschedule/
+Content-Type: application/json
+
+{
+  "courseId": "testParticipant",
+  "participantId": "222-444-555"
+}
+
+### Delete course schedule
+DELETE https://localhost:5001/courseschedule/6
+Accept: application/json
